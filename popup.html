@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MindGuard</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      width: 300px;
+      padding: 10px 20px;
+      background-color: #f7f8fa;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #333;
+    }
+    .icon {
+      width: 24px;
+      height: 24px;
+      margin-right: 8px;
+    }
+    h1 {
+      font-size: 18px;
+      margin: 0;
+    }
+    .status-box {
+      border-radius: 8px;
+      padding: 16px;
+      margin-top: 15px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    .status-text {
+      font-size: 20px;
+      font-weight: bold;
+      margin: 0;
+    }
+    .message {
+      font-size: 14px;
+      color: #555;
+      margin-top: 8px;
+    }
+    
+    /* Status Colors */
+    .status-safe {
+      background-color: #e0f8e9;
+      border: 1px solid #72d9a3;
+      color: #0d6b3a;
+    }
+    .status-dangerous {
+      background-color: #fce1e1;
+      border: 1px solid #f08b8b;
+      color: #a82b2b;
+    }
+    .status-checking, .status-error, .status-no-url {
+      background-color: #e6eaf0;
+      border: 1px solid #a0aec0;
+      color: #4a5568;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <img src="images/icon48.png" class="icon" alt="MindGuard Icon">
+      <h1>MindGuard</h1>
+    </div>
+    
+    <div id="status-container" class="status-box status-checking">
+      <p id="status-text" class="status-text">Checking...</p>
+      <p id="message-text" class="message">Analyzing the current page.</p>
+    </div>
+  </div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>
+
